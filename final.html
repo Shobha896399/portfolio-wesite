@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday ❤️</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            background: linear-gradient(135deg, #141E30, #243B55);
+            color: white;
+        }
+
+        .container {
+            text-align: center;
+            padding: 30px;
+            width: 90%;
+            max-width: 900px;
+            animation: fade 2s;
+        }
+
+        h1 {
+            font-size: 60px;
+            margin-bottom: 20px;
+            animation: glow 2s infinite;
+        }
+
+        p {
+            font-size: 22px;
+            line-height: 1.8;
+            margin-top: 20px;
+        }
+
+        img {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 8px solid white;
+            margin-bottom: 25px;
+            box-shadow: 0 0 40px hotpink;
+        }
+
+        footer {
+            margin-top: 50px;
+            font-size: 18px;
+            opacity: .8;
+        }
+
+        .heart {
+            position: absolute;
+            font-size: 30px;
+            color: pink;
+            animation: float 8s linear infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-120vh);
+                opacity: 0;
+            }
+        }
+
+        @keyframes glow {
+            50% {
+                text-shadow:
+                    0 0 20px white,
+                    0 0 40px hotpink,
+                    0 0 80px deeppink;
+            }
+        }
+
+        @keyframes fade {
+            from {
+                opacity: 0;
+                transform: scale(.8);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @media (max-width:768px) {
+
+            .container {
+                padding: 20px;
+            }
+
+            img {
+                width: 170px;
+                height: 170px;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+
+            p {
+                font-size: 18px;
+            }
+
+            footer {
+                font-size: 15px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="5.jpeg">
+        <h1>🎉 Happy Birthday Bhai ❤️</h1>
+        <p>
+            No matter how old we become,
+            you will always be my smily bro.
+            Thank you for always making me smile.
+            May God bless you with happiness,
+            success, good health and a beautiful life.
+            I am so lucky to have a brother like you.
+            ❤️ Happy Birthday Once Again ❤️
+        </p>
+        <footer>
+            Designed & Developed with ❤️ by Ritika
+        </footer>
+    </div>
+    <script>
+        for (let i = 0; i < 60; i++) {
+            let heart = document.createElement("div")
+            heart.innerHTML = "❤";
+            heart.className = "heart";
+            heart.style.left = Math.random() * 100 + "%";
+            heart.style.animationDuration = (5 + Math.random() * 5) + "s";
+            heart.style.fontSize = (20 + Math.random() * 30) + "px";
+            document.body.appendChild(heart);
+        }
+    </script>
+</body>
+
+</html>
